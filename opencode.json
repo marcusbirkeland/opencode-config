@@ -1,0 +1,279 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "update": "notify",
+  "model": "nhn/nhn-coder",
+  "provider": {
+    "nhn": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "nhn",
+      "options": {
+        "baseURL": "https://chat.nhn.no/api"
+      },
+      "models": {
+        "nhn-coder": {
+          "name": "nhn-coder",
+          "tool_call": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 256000,
+            "output": 64000
+          }
+        },
+        "nhn-medium": {
+          "name": "nhn-medium",
+          "tool_call": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 256000,
+            "output": 64000
+          }
+        },
+        "nhn-large": {
+          "name": "nhn-large",
+          "tool_call": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ],
+            "output": [
+              "text"
+            ]
+          },
+          "limit": {
+            "context": 256000,
+            "output": 64000
+          }
+        }
+      }
+    }
+  },
+  "permissions": [
+    {
+      "action": "read",
+      "resource": ".env",
+      "effect": "deny"
+    },
+    {
+      "action": "read",
+      "resource": ".env.*",
+      "effect": "allow"
+    },
+    {
+      "action": "read",
+      "resource": ".env-*",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "*",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "git *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git commit *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "git push *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "git remote remove *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "git remote add *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "grep *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "ls *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "sort",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "sort *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "cd *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pwd *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "echo *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "cat *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "head *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "tail *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "wc *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "tree *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "find *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "touch *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "rm *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "node *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "node -v",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm i *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm install *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm add *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm remove *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm update *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm run",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm run *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm exec",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm exec *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm dlx",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm dlx *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm publish *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm deploy *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "pnpm config set *",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "mv *",
+      "effect": "ask"
+    }
+  ]
+}
