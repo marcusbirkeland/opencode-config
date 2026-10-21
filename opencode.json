@@ -202,6 +202,76 @@
     },
     {
       "action": "shell",
+      "resource": "git -C * status *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * diff *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * log *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * show *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * branch -a",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * branch --all",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * branch --show-current",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * branch --list *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * ls-tree *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * ls-files *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * rev-parse *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * remote *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * check-ignore *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * grep *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
       "resource": "grep *",
       "effect": "allow"
     },
