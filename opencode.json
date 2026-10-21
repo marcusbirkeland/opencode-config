@@ -272,6 +272,26 @@
     },
     {
       "action": "shell",
+      "resource": "git switch",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "git switch *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * switch",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
+      "resource": "git -C * switch *",
+      "effect": "ask"
+    },
+    {
+      "action": "shell",
       "resource": "grep *",
       "effect": "allow"
     },
